@@ -8,6 +8,7 @@ import { FaArrowRight, FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
         <Container>
           <Flex className={"justify-between"}>
             <div className="">
-              <Image imgSrc={Logo} />
+              <Link to={"/"}><Image imgSrc={Logo} /></Link>
             </div>
             <div className="relative">
               {/* <input
@@ -32,9 +33,9 @@ const Header = () => {
                 Search
               </Button> */}
               <ul className="flex gap-x-4 items-center text-[16px] font-bold text-[#253D4E]">
-                <li>Home </li>
-                <li>About</li>
-                <li>Shop</li>
+                <li><Link to={"/"}>Home</Link></li>
+                <li><Link to={"/about"}>About</Link></li>
+                <li><Link to={"/shop"}>Shop</Link></li>
                 <li>Mega Menu </li>
                 <li>Vendors </li>
                 <li>Blog</li>
