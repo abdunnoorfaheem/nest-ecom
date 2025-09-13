@@ -19,7 +19,7 @@ const Header = () => {
               <Image imgSrc={Logo} />
             </div>
             <div className="relative">
-              <input
+              {/* <input
                 type="text"
                 placeholder="Search for products"
                 className="border-1 border-[#3BB77E] w-[596px] p-[15px] rounded-[7px] outline-0"
@@ -30,7 +30,17 @@ const Header = () => {
                 }
               >
                 Search
-              </Button>
+              </Button> */}
+              <ul className="flex gap-x-4 items-center text-[16px] font-bold text-[#253D4E]">
+                <li>Home </li>
+                <li>About</li>
+                <li>Shop</li>
+                <li>Mega Menu </li>
+                <li>Vendors </li>
+                <li>Blog</li>
+                <li>Pages</li>
+                <li>Contact</li>
+              </ul>
             </div>
             <div className="flex items-center gap-x-8">
               <button className="text-[#3BB77E] text-[14px] font-medium border-1 border-[#ECECEC] shadow-[5px_5px_15px_0px_rgba(0,0,0,0.05)] py-[7px] pl-[14px] pr-[12px] flex items-center gap-x-2">
