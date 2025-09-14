@@ -4,8 +4,21 @@ import ProductONE from "/src/assets/productOne.png";
 import Heading from './Heading';
 import SSS  from "/src/assets/sss.png";
 import { LuShoppingCart } from "react-icons/lu";
+import { useDispatch } from 'react-redux';
+import { addtocart } from '../slices/addToCartSlice';
 
 const Product = ({productIMG,productCATEGORY,productTITLE,productPRICE,}) => {
+  let dispatch=useDispatch();
+  let handleAddToCart=()=>{
+    dispatch(addtocart({
+      productImg:productIMG,
+      productCategory:productCATEGORY,
+      title:productTITLE,
+      price:productPRICE,
+      quantity:1
+    }))
+    
+  }
   return (
     <>
       <div className="p-[25px] border-2 border-[#ECECEC]  rounded-[15px]">
@@ -35,7 +48,7 @@ const Product = ({productIMG,productCATEGORY,productTITLE,productPRICE,}) => {
          </div>
          
          <div className="">
-          <button className='flex items-center text-[#29A56C] gap-x-1 bg-[#DEF9EC] px-5 py-2 rounded-[4px]'><LuShoppingCart/> Add</button>
+          <button className='flex items-center text-[#29A56C] gap-x-1 bg-[#DEF9EC] px-5 py-2 rounded-[4px] ' onClick={handleAddToCart}><LuShoppingCart/> Add</button>
          </div>
         </div>
       </div>

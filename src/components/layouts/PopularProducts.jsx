@@ -29,7 +29,7 @@ const PopularProducts = () => {
             {
               allData.map((item)=>(
                  
-                <div className="w-[24%]">
+                <div className="w-[24%]" key={item.id}>
                   <Product productIMG={item.thumbnail} productCATEGORY={item.category} productTITLE={item.title} productPRICE={item.price}/>
                 </div>
               ))
