@@ -13,7 +13,7 @@ const Product = ({productIMG,productCATEGORY,productTITLE,productPRICE,}) => {
           <Image imgSrc={productIMG} className={"m-auto w-[182px]"}/>
         </div>
         <Heading text={productCATEGORY} tagName={"h4"} className={"text-[12px] text-[#ADADAD]"}/>
-        <Heading text={productTITLE} tagName={"h4"} className={"w-[133px] text-[16px] text-[#253D4E] font-bold pt-[5px] pb-[10px]"}/>
+        <Heading text={productTITLE} tagName={"h4"} className={"w-[200px] text-[16px] text-[#253D4E] font-bold pt-[5px] pb-[10px]"}/>
         <div className="flex items-center">
           <div className="">
             <Image imgSrc={SSS}/>
